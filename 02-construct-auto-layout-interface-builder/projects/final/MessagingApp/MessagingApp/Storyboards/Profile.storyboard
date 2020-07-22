@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZT-j1-Ibg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="GYB-0c-ys9">
+            <objects>
+                <viewController id="vZT-j1-Ibg" customClass="ProfileViewController" customModule="MessagingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jYB-PR-RZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wid-Tq-khg" customClass="ProfileImageView" customModule="MessagingApp" customModuleProvider="target">
+                                <rect key="frame" x="107.5" y="44" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wid-Tq-khg" secondAttribute="height" multiplier="1:1" id="7mo-1h-1En"/>
+                                    <constraint firstAttribute="width" constant="160" id="zq8-ff-a9S"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderShape" value="squircle"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znG-jN-f4d" customClass="ProfileNameLabel" customModule="MessagingApp" customModuleProvider="target">
+                                <rect key="frame" x="107.5" y="220" width="160" height="57.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isMultipleLine" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wid-Tq-khg" firstAttribute="top" secondItem="IhH-kx-IyQ" secondAttribute="top" constant="24" id="Vct-Gn-8LG"/>
+                            <constraint firstItem="znG-jN-f4d" firstAttribute="width" secondItem="wid-Tq-khg" secondAttribute="width" id="WZY-QG-rVe"/>
+                            <constraint firstItem="wid-Tq-khg" firstAttribute="centerX" secondItem="jYB-PR-RZ1" secondAttribute="centerX" id="fTV-SY-Vbh"/>
+                            <constraint firstItem="znG-jN-f4d" firstAttribute="centerX" secondItem="wid-Tq-khg" secondAttribute="centerX" id="o31-2e-Txj"/>
+                            <constraint firstItem="IhH-kx-IyQ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="znG-jN-f4d" secondAttribute="bottom" constant="20" id="w1i-mG-MTF"/>
+                            <constraint firstItem="znG-jN-f4d" firstAttribute="top" secondItem="wid-Tq-khg" secondAttribute="bottom" constant="16" id="zmz-GE-Xsf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IhH-kx-IyQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="znG-jN-f4d" id="gnq-Cs-97W"/>
+                        <outlet property="profileImageView" destination="wid-Tq-khg" id="XGe-Rr-mJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFw-BU-34c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1342" y="-701"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactPreviewView" customModule="MessagingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="1u4-yf-1er" id="oF1-ah-NvZ"/>
+                <outlet property="nameLabel" destination="oZ9-nm-gHy" id="I2B-jl-Qmt"/>
+                <outlet property="photoImageView" destination="l5b-F5-zXB" id="5xr-xy-WY6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1u4-yf-1er">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rw-logo" translatesAutoresizingMaskIntoConstraints="NO" id="l5b-F5-zXB">
+                    <rect key="frame" x="35" y="25" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="2Sg-BD-iRh"/>
+                        <constraint firstAttribute="width" secondItem="l5b-F5-zXB" secondAttribute="height" multiplier="1:1" id="3ls-nM-4ab"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ9-nm-gHy">
+                    <rect key="frame" x="7.5" y="113" width="135" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="rw-light"/>
+            <constraints>
+                <constraint firstItem="l5b-F5-zXB" firstAttribute="centerX" secondItem="7VY-S7-zvR" secondAttribute="centerX" id="Asd-dY-zAP"/>
+                <constraint firstItem="oZ9-nm-gHy" firstAttribute="width" secondItem="1u4-yf-1er" secondAttribute="width" multiplier="0.9" id="Eoa-02-A0F"/>
+                <constraint firstItem="oZ9-nm-gHy" firstAttribute="top" secondItem="l5b-F5-zXB" secondAttribute="bottom" constant="8" id="qdK-1G-eGf"/>
+                <constraint firstItem="oZ9-nm-gHy" firstAttribute="centerX" secondItem="l5b-F5-zXB" secondAttribute="centerX" id="t9z-4r-wi1"/>
+                <constraint firstItem="l5b-F5-zXB" firstAttribute="top" secondItem="7VY-S7-zvR" secondAttribute="top" constant="25" id="wRC-9O-jeO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="7VY-S7-zvR"/>
+            <point key="canvasLocation" x="-4.7999999999999998" y="-76.46176911544228"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rw-logo" width="512" height="512"/>
+        <namedColor name="rw-light">
+            <color red="0.94901960784313721" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

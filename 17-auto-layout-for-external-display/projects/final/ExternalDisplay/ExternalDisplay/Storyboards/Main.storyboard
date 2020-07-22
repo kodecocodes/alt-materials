@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WLO-d2-ei3">
+    <device id="retina4_7" orientation="landscape" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music Sampling Controller-->
+        <scene sceneID="rdp-7N-crE">
+            <objects>
+                <viewController id="WLO-d2-ei3" customClass="MusicSamplingController" customModule="ExternalDisplay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Umh-uY-UdT">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLp-5F-YIt" customClass="SamplingView" customModule="ExternalDisplay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="16" width="635" height="343"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3tP-kF-APF" firstAttribute="trailing" secondItem="TLp-5F-YIt" secondAttribute="trailing" constant="16" id="1OP-n7-5sT"/>
+                            <constraint firstItem="TLp-5F-YIt" firstAttribute="leading" secondItem="3tP-kF-APF" secondAttribute="leading" constant="16" id="DTz-K3-ehw"/>
+                            <constraint firstItem="3tP-kF-APF" firstAttribute="bottom" secondItem="TLp-5F-YIt" secondAttribute="bottom" constant="16" id="Lrs-z1-vYP"/>
+                            <constraint firstItem="TLp-5F-YIt" firstAttribute="top" secondItem="3tP-kF-APF" secondAttribute="top" constant="16" id="kxz-Oa-4E6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3tP-kF-APF"/>
+                    </view>
+                    <connections>
+                        <outlet property="samplingView" destination="TLp-5F-YIt" id="dce-hd-OdW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXi-m3-vzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.97601199400302" y="167.19999999999999"/>
+        </scene>
+        <!--Music Player View Controller-->
+        <scene sceneID="JH8-t0-NR7">
+            <objects>
+                <viewController storyboardIdentifier="MusicPlayerViewController" id="gZx-kR-cS2" customClass="MusicPlayerViewController" customModule="ExternalDisplay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8nM-td-WdM">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LRk-Lz-n6r">
+                                <rect key="frame" x="83.5" y="16" width="500" height="343"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="none" translatesAutoresizingMaskIntoConstraints="NO" id="Dnm-CS-YKv">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="250.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R9p-3M-gKT">
+                                        <rect key="frame" x="0.0" y="266.5" width="500" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="R9p-3M-gKT" firstAttribute="width" relation="greaterThanOrEqual" secondItem="Dnm-CS-YKv" secondAttribute="width" id="aFi-ZS-wOd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LRk-Lz-n6r" firstAttribute="centerX" secondItem="8nM-td-WdM" secondAttribute="centerX" id="27h-kg-jMz"/>
+                            <constraint firstItem="LRk-Lz-n6r" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4YG-K6-dk2" secondAttribute="top" constant="16" id="7nJ-9r-K6U"/>
+                            <constraint firstItem="4YG-K6-dk2" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LRk-Lz-n6r" secondAttribute="bottom" constant="16" id="Ewc-bU-l1o"/>
+                            <constraint firstItem="4YG-K6-dk2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LRk-Lz-n6r" secondAttribute="trailing" constant="16" id="Fh3-hw-mbq"/>
+                            <constraint firstItem="LRk-Lz-n6r" firstAttribute="centerY" secondItem="8nM-td-WdM" secondAttribute="centerY" id="Ms3-rn-h2c"/>
+                            <constraint firstItem="LRk-Lz-n6r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4YG-K6-dk2" secondAttribute="leading" constant="16" id="els-qq-XSU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4YG-K6-dk2"/>
+                    </view>
+                    <connections>
+                        <outlet property="artworkImageView" destination="Dnm-CS-YKv" id="uwb-3A-HB9"/>
+                        <outlet property="musicGenreLabel" destination="R9p-3M-gKT" id="Gul-D3-699"/>
+                        <outlet property="stackView" destination="LRk-Lz-n6r" id="Z1B-9c-hKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zu9-VB-mAY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="929"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="none" width="500" height="500"/>
+    </resources>
+</document>

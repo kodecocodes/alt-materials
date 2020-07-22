@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "2de-YL-U2G"; */
+"2de-YL-U2G.normalTitle" = "قريب";
+
+/* Class = "UINavigationItem"; title = "To Do List"; ObjectID = "Sju-Nu-Dv3"; */
+"Sju-Nu-Dv3.title" = "عمل قائمة";
+
+/* Class = "UILabel"; text = "Version 1.0.0"; ObjectID = "TB1-Ek-59o"; */
+"TB1-Ek-59o.text" = "الإصدار 1.0.0";
+
+/* Class = "UILabel"; text = "Todo App"; ObjectID = "vzc-Kl-K0R"; */
+"vzc-Kl-K0R.text" = "للقيام التطبيق";

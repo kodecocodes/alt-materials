@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DJControllerView" customModule="CustomControls" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-eK-kNH">
+                    <rect key="frame" x="60" y="15.999999999999993" width="578" height="121.33333333333331"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydZ-wp-fBt" customClass="BacklitButton" customModule="CustomControls" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="182" height="121.33333333333333"/>
+                            <color key="backgroundColor" name="button-red"/>
+                            <constraints>
+                                <constraint firstAttribute="height" secondItem="ydZ-wp-fBt" secondAttribute="width" multiplier="1:1.5" id="fD8-tN-kmy"/>
+                                <constraint firstAttribute="height" secondItem="ydZ-wp-fBt" secondAttribute="width" multiplier="1.5" id="vd9-KQ-Bhn"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="fD8-tN-kmy"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=compact">
+                                <mask key="constraints">
+                                    <include reference="fD8-tN-kmy"/>
+                                    <exclude reference="vd9-KQ-Bhn"/>
+                                </mask>
+                            </variation>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-St-fV9" customClass="BacklitButton" customModule="CustomControls" customModuleProvider="target">
+                            <rect key="frame" x="198" y="0.0" width="182" height="121.33333333333333"/>
+                            <color key="backgroundColor" name="button-green"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qds-K4-ryc" customClass="BacklitButton" customModule="CustomControls" customModuleProvider="target">
+                            <rect key="frame" x="396" y="0.0" width="182" height="121.33333333333333"/>
+                            <color key="backgroundColor" name="button-gray"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiW-Te-q83" customClass="DiscSpinnerView" customModule="CustomControls" customModuleProvider="target">
+                    <rect key="frame" x="60" y="153.33333333333337" width="578" height="223.66666666666663"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-bR-aMf" customClass="PitchControl" customModule="CustomControls" customModuleProvider="target">
+                    <rect key="frame" x="654" y="16" width="182" height="361"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vOn-eK-kNH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="034-rS-Htp"/>
+                <constraint firstItem="aiW-Te-q83" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1R2-vv-T2w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vUl-bR-aMf" secondAttribute="trailing" constant="16" id="2Fc-Pu-eUy"/>
+                <constraint firstItem="aiW-Te-q83" firstAttribute="top" secondItem="vOn-eK-kNH" secondAttribute="bottom" constant="16" id="6rE-op-4Pa"/>
+                <constraint firstItem="vUl-bR-aMf" firstAttribute="bottom" secondItem="aiW-Te-q83" secondAttribute="bottom" id="AJY-d7-tMZ"/>
+                <constraint firstItem="aiW-Te-q83" firstAttribute="trailing" secondItem="qds-K4-ryc" secondAttribute="trailing" id="DHT-Cv-F6g"/>
+                <constraint firstItem="vUl-bR-aMf" firstAttribute="top" secondItem="vOn-eK-kNH" secondAttribute="top" id="KaU-bp-Ltq"/>
+                <constraint firstItem="ydZ-wp-fBt" firstAttribute="height" secondItem="vUl-bR-aMf" secondAttribute="height" id="Pp4-mX-Vjm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aiW-Te-q83" secondAttribute="trailing" constant="16" id="VrR-dE-Bhi"/>
+                <constraint firstItem="ydZ-wp-fBt" firstAttribute="width" secondItem="vUl-bR-aMf" secondAttribute="width" id="YME-Zo-dNy"/>
+                <constraint firstItem="vOn-eK-kNH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="d2J-QX-4bA"/>
+                <constraint firstItem="vUl-bR-aMf" firstAttribute="leading" secondItem="vOn-eK-kNH" secondAttribute="trailing" constant="16" id="icS-FQ-cpv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aiW-Te-q83" secondAttribute="bottom" constant="16" id="uDh-W0-Oep"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="DHT-Cv-F6g"/>
+                    <exclude reference="AJY-d7-tMZ"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <exclude reference="VrR-dE-Bhi"/>
+                    <exclude reference="Pp4-mX-Vjm"/>
+                    <include reference="DHT-Cv-F6g"/>
+                    <include reference="AJY-d7-tMZ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="17" y="149"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="button-gray">
+            <color red="0.43000000715255737" green="0.51999998092651367" blue="0.56000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button-green">
+            <color red="0.56999999284744263" green="0.69999998807907104" blue="0.5899999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="button-red">
+            <color red="0.43999999761581421" green="0.059999998658895493" blue="0.10000000149011612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

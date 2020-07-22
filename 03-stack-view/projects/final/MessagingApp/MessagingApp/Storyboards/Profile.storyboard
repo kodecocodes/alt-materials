@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZT-j1-Ibg">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="GYB-0c-ys9">
+            <objects>
+                <viewController id="vZT-j1-Ibg" customClass="ProfileViewController" customModule="MessagingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jYB-PR-RZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYt-4p-7We">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313.33333333333331"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PZ1-3Z-ra0">
+                                        <rect key="frame" x="20" y="26" width="374" height="279.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HjD-pW-3jN">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="233.33333333333334"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvY-Yt-80u">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mor-Ie-OTo">
+                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="160"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wid-Tq-khg" customClass="ProfileImageView" customModule="MessagingApp" customModuleProvider="target">
+                                                                <rect key="frame" x="107" y="0.0" width="160" height="160"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="wid-Tq-khg" secondAttribute="height" multiplier="1:1" id="7mo-1h-1En"/>
+                                                                    <constraint firstAttribute="width" constant="160" id="dZJ-c9-PRI"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="borderShape" value="squircle"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzR-Ct-1xk">
+                                                                <rect key="frame" x="267" y="0.0" width="107" height="160"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="tzR-Ct-1xk" firstAttribute="width" secondItem="Mor-Ie-OTo" secondAttribute="width" id="G16-Q0-yNO"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znG-jN-f4d" customClass="ProfileNameLabel" customModule="MessagingApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="176" width="374" height="57.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isMultipleLine" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XUw-sG-CTc">
+                                                <rect key="frame" x="0.0" y="249.33333333333331" width="374" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOO-1c-BSB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="30"/>
+                                                        <state key="normal" title="Message"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-E3-F9R">
+                                                        <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="30"/>
+                                                        <state key="normal" title="Call"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3X-aU-xWm">
+                                                        <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="30"/>
+                                                        <state key="normal" title="Email"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="PZ1-3Z-ra0" firstAttribute="top" secondItem="GYt-4p-7We" secondAttribute="top" constant="26" id="C74-ci-23X"/>
+                                    <constraint firstItem="PZ1-3Z-ra0" firstAttribute="centerX" secondItem="GYt-4p-7We" secondAttribute="centerX" id="GZF-IV-YIh"/>
+                                    <constraint firstAttribute="bottom" secondItem="PZ1-3Z-ra0" secondAttribute="bottom" constant="8" id="iL2-Bm-oFA"/>
+                                    <constraint firstItem="PZ1-3Z-ra0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GYt-4p-7We" secondAttribute="leading" constant="20" id="qJ4-HH-Fmh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GYt-4p-7We" firstAttribute="top" secondItem="jYB-PR-RZ1" secondAttribute="top" id="Us3-gK-Gkb"/>
+                            <constraint firstAttribute="trailing" secondItem="GYt-4p-7We" secondAttribute="trailing" id="bgj-tL-iQV"/>
+                            <constraint firstItem="GYt-4p-7We" firstAttribute="leading" secondItem="jYB-PR-RZ1" secondAttribute="leading" id="nSK-sc-rd9"/>
+                            <constraint firstItem="IhH-kx-IyQ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GYt-4p-7We" secondAttribute="bottom" id="pbf-QZ-p6C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IhH-kx-IyQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="znG-jN-f4d" id="gnq-Cs-97W"/>
+                        <outlet property="profileImageView" destination="wid-Tq-khg" id="XGe-Rr-mJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFw-BU-34c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1343.4782608695652" y="-701.9021739130435"/>
+        </scene>
+    </scenes>
+</document>
