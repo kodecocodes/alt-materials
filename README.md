@@ -9,4 +9,4 @@ Each edition has its own branch, named `editions/[EDITION]`. The default branch 
 | Branch                                                                           | Edition | Release Date |
 | -------------------------------------------------------------------------------- |:-------:|:------------:|
 | [editions/1.0](https://github.com/raywenderlich/alt-materials/tree/editions/1.0) | 1.0     | 2020-05-15   |
-
+| [editions/2.0](https://github.com/raywenderlich/alt-materials/tree/editions/2.0) | 2.0     | YYYY-MM-DD   |
